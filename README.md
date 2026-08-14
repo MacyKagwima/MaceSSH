@@ -27,4 +27,4 @@ misconfigured, or missing.
 ## Versions
 - **v1** — Checks whether headers are present or missing
 - **v2** — Adds reasonable value checking (present vs misconfigured)
-- **v3** — Coming soon
+- **v3** — Misconfigured headers now show the current value, expected value, and a plain English explanation of the issue.
