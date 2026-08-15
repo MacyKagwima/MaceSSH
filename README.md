@@ -28,3 +28,4 @@ misconfigured, or missing.
 - **v1** — Checks whether headers are present or missing
 - **v2** — Adds reasonable value checking (present vs misconfigured)
 - **v3** — Misconfigured headers now show the current value, expected value, and a plain English explanation of the issue.
+- **v4** — Scan multiple URLs in a single session with input validation. Only accepts yes/no to continue or exit.
