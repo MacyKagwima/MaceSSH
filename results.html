@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Results</title>
+</head>
+<body>
+    <h1>Security Header Scanner</h1>
+    <h2>Results for: {{ url }}</h2>
+    <p>Security Score: {{ score }}/100 - {{ rating }}</p>
+    
+    <table border="1">
+        <tr>
+            <th>Header</th>
+            <th>Status</th>
+            <th>Current Value</th>
+            <th>Issue</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.header }}</td>
+            <td>{{ result.status }}</td>
+            <td>{% if result.current %}{{ result.current }}{% endif %}</td>
+            <td>{% if result.issue %}{{ result.issue }}{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <br>
+    <a href="/">Scan another URL</a> |
+    <a href="/report">View Final Report</a>
+</body>
+</html>
+            
