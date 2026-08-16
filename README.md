@@ -55,36 +55,36 @@ Named MaceSSH.
 This tool is a lightweight educational scanner, not a professional 
 security audit. Please read the following before interpreting results:
 
-**1. Four headers only**
+**1. Four headers only**:
 MaceSSH checks for four specific HTTP security headers: 
 Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, 
 and X-XSS-Protection. Any other security measures a site uses are 
 not captured in this scan.
 
-**2. Simplified misconfiguration detection**
+**2. Simplified misconfiguration detection**:
 The scanner checks for specific strings inside header values. A header 
 can be genuinely well-configured using different syntax than what MaceSSH 
 expects and still be flagged as misconfigured. Spotify's CSP is a real 
 example of this — complex and deliberate, but flagged by our checker.
 
-**3. Surface level only**
+**3. Surface level only**:
 MaceSSH sees only what the server sends back publicly. Infrastructure-level 
 security such as load balancers, CDN configurations, API security, 
 authentication systems, and data encryption are completely invisible to 
 this tool.
 
-**4. Results vary by endpoint**
+**4. Results vary by endpoint**:
 Different pages on the same site can return different headers. Scanning 
 google.com and gmail.com returns different results even though both 
 belong to Google.
 
-**5. X-XSS-Protection is outdated**
+**5. X-XSS-Protection is outdated**:
 Modern browsers have largely moved away from this header. A missing or 
 disabled X-XSS-Protection is not necessarily a security flaw — many sites 
 deliberately omit it in favour of stronger Content-Security-Policy 
 implementations.
 
-**6. This is not a security audit**
+**6. This is not a security audit**:
 A low score does not mean a site is insecure. It means the four specific 
 headers MaceSSH checks for were not all present or correctly configured. 
 A site can score 0 on MaceSSH and still have robust security 
