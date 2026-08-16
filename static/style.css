@@ -1,0 +1,136 @@
+:root {
+    --bg: #f0f4f8;
+    --card: #ffffff;
+    --text: #1a2940;
+    --accent: #00b4c8;
+    --good: #52b788;
+    --moderate: #f4a261;
+    --poor: #e07a5f;
+    --critical: #c1121f;
+    --border: #dce3ed;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #2d1654;
+        --card: #3d2466;
+        --text: #e8edf2;
+        --accent: #00d4eb;
+        --border: #4d3476;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Garamond','Times New Roman', Georgia, serif;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 0.3rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 1rem
+}
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.85;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+th {
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+td {
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+.good { color: var(--good); font-weight: bold; }
+.moderate { color: var(--moderate); font-weight: bold;}
+.poor { color: var(--poor); font-weight: bold;}
+.critical { color: var(--critical); font-weight: bold;}
+
+.score {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
