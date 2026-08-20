@@ -50,6 +50,10 @@ view results per scan, and generate a compiled final report. Features
 automatic dark/light mode, session management, and input validation. 
 Named MaceSSH.
 
+**v8** - Export scan results as CSV or PDF directly from the final report page. CSV opens in Excel for further analysis. PDF generates a clean formatted report for sharing.
+
+**v9** - Expanded to eight security headers. Added Referrer-Policy, Permissions-Policy, X-Content-Type-Options, and Cross-Origin-Opener-Policy. Scoring redistributed across all eight headers with weights reflecting each header's relative importance.
+
 ## Limitations
 
 This tool is a lightweight educational scanner, not a professional 
