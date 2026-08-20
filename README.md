@@ -91,5 +91,9 @@ implementations.
 **6. This is not a security audit**:
 A low score does not mean a site is insecure. It means the four specific 
 headers MaceSSH checks for were not all present or correctly configured. 
+
+**7. Hosted Version Limitation**:
+The free tier of PythonAnywhere restricts outbound HTTP requests to a whitelist of approved domains. The locally run version has no such restriction and can scan any publicly accessible URL.
+
 A site can score 0 on MaceSSH and still have robust security 
 infrastructure in place.
